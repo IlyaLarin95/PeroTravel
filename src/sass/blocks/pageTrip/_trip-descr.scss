@@ -1,0 +1,30 @@
+.trip-descr {
+    @include padding-top(150,50);
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info {
+        max-width: 380px;
+    }
+    &__text {
+        margin-top: 40px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $black;
+    }
+    &__price {
+        @include gap(75,40);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item-price__box {
+        width: 160px;
+        height: 100px;
+        padding: 0;
+    }
+}

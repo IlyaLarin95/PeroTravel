@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+
+@import 'blocks/global';
+@import 'blocks/header';
+@import 'blocks/swiper';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/accordion';
+@import 'blocks/gallery';
+@import 'blocks/reviews';
+
+
+//Main
+@import 'blocks/pageMain/promo';
+@import 'blocks/pageMain/popular';
+@import 'blocks/pageMain/about';
+@import 'blocks/pageMain/types';
+@import 'blocks/pageMain/consultation';
+
+
+//Tours
+@import 'blocks/pageTours/hero-tours';
+@import 'blocks/pageTours/content';
+
+
+//Trip
+@import 'blocks/pageTrip/trip-hero';
+@import 'blocks/pageTrip/trip-descr';
+@import 'blocks/pageTrip/trip-calendar';
+@import 'blocks/pageTrip/trip-route';
+@import 'blocks/pageTrip/trip-expenses';
+@import 'blocks/pageTrip/trip-important';
+@import 'blocks/pageTrip/trip-booking';
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    @include container($containerWidth);
+}
+.container-fluid {
+    margin: 0px;
+    &_l {
+    margin-left: calc(50% - #{$containerWidth}px / 2);
+    }
+    &_r {
+    margin-right: calc(50% - #{$containerWidth}px / 2);
+    }
+}
+
+@import 'base/media';

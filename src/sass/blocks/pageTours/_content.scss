@@ -1,0 +1,247 @@
+.content {
+    padding: 40px 0 80px 0;
+    background: #FBFBFB;
+    .tab {
+        &__item {
+            cursor: pointer;
+            transition: .3s ease all;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 100%;
+                height: 2px;
+                background-color: $gray;
+                transition: .3s ease all;
+            }
+            &_active {
+                color: $blue;
+                transition: .3s ease all;
+                &::after {
+                    background-color: $blue;
+                    transition: .3s ease all;
+                }
+                &:hover {
+                    cursor: default;
+                }
+            }
+        }
+        &__content {
+            display: none;
+            &_active {
+                display: flex;
+            }
+        }
+    }
+    &__tours {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+
+// Search
+.block-search {
+    padding: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        @include font-size(14,12);
+        @include padding-left(10,5);
+        @include padding-right(10,5);
+        padding-top: 0;
+        padding-bottom: 15px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $black;
+    }
+    &__title:first-child {
+        @include padding-left(15,5);
+    }
+    &__title:last-child {
+        @include padding-right(15,5);
+    }
+    &__form {
+        margin-top: 60px;
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px 20px;            
+        }
+    }
+    &__item {
+        position: relative;
+        cursor: pointer;
+        width: 235px;
+    }
+    &__btn {
+        padding: 17px 82px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        border-radius: 10px;
+    }
+}
+
+
+//Filter
+.block-filter {
+    padding: 25px 35px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    max-width: 295px;
+    width: 100%;
+    height: fit-content;
+    &__items {
+        margin-top: 10px;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 14px;
+    }
+    &__item {
+        width: 100%;
+        border-bottom: 1px solid #EDEDED;
+    }
+    &__btn {
+        padding: 13px 82px;
+        display: block;
+        margin: 0 auto;
+    }
+    &__clear {
+        display: block;
+        margin: 0 auto;
+        margin-top: 12px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.2;
+        color: $black;
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+.item-filter {
+    &__title {
+        padding: 20px 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $black;
+        background-color: transparent;
+    }
+}
+
+
+//Tours
+.block-tours {
+    &__items {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.item-tour {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    display: flex;
+    max-width: 780px;
+    &__img {
+        width: 238px;
+        height: 300px;
+        border-radius: 10px 0px 0px 10px;
+        img {
+            width: 238px;
+            height: 300px;
+            border-radius: 10px 0px 0px 10px;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        @include padding-top(27,20);
+        @include padding-bottom(27,20);
+        @include padding-right(43,15);
+        @include padding-left(43,15);
+        line-height: 1.2;
+    }
+    &__type {
+        font-weight: 500;
+        font-size: 12px;
+        color: $yellow;
+    }
+    &__title {
+        margin-top: 2px;
+        font-weight: 700;
+        font-size: 18px;
+        color: $black;
+    }
+    &__price {
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: 700;
+        color: $blue;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        &-item:last-child {
+            @include margin-left(30,5);
+        }
+        &-value {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        &-name {
+            font-weight: 500;
+            font-size: 10px;
+            color: $black;
+        }
+    }
+    &__descr {
+        margin-top: 20px;
+        padding-left: 20px;
+        position: relative;
+        font-weight: 500;
+        font-size: 12px;
+        color: $black;
+        max-height: 145px;
+        overflow: hidden;
+        text-overflow:clip;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 3px;
+            height: 100%;
+            background-color: $blue;
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}

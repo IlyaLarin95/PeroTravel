@@ -1,0 +1,12 @@
+.hero-tours {
+    @include padding-top(140,140);
+    @include padding-bottom(60,140);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/bg-tour.webp') no-repeat 50%/cover;
+    &__title {
+        @include font-size(72,34);
+        @include gap(32,30);
+        font-weight: 700;
+        line-height: 1.2;
+        color: #FFFFFF;
+    }
+}

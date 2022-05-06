@@ -1,0 +1,26 @@
+<div class="overlay">
+    <div class="modal" id="callback">
+        <div class="modal__close">&times;</div>
+        <div class="modal__title">Оставить заявку</div>
+        <form class="modal__form" action="#">
+            <input class="modal__input" required name="name" placeholder="Ваше имя" type="text">
+            <input class="modal__input" required name="phone" placeholder="Ваш телефон" type="tel">
+            <input class="modal__input" name="email" placeholder="Ваш E-mail" type="email">
+            <label class="modal__checkbox" for="modal-checkbox">
+                <input required class="modal__checkbox-input" type="checkbox" id="modal-checkbox">
+                <span class="modal__checkbox-fake"></span>
+                <span class="modal__checkbox-text">Согласие на обработку персональных данных</span>
+            </label>
+            <button class="btn btn-callback-thanks">Перезвоните мне</button>
+        </form>
+    </div>
+           
+     <div class="modal modal_mini" id="thanks">
+         <div class="modal__close">&times;</div>
+         <svg class="modal__icon" width="24" height="24" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M27 5.66683C15.2179 5.66683 5.66665 15.2181 5.66665 27.0002C5.66665 38.7822 15.2179 48.3335 27 48.3335C38.7821 48.3335 48.3333 38.7822 48.3333 27.0002C48.3333 15.2181 38.7821 5.66683 27 5.66683ZM0.333313 27.0002C0.333313 12.2726 12.2724 0.333496 27 0.333496C41.7276 0.333496 53.6666 12.2726 53.6666 27.0002C53.6666 41.7278 41.7276 53.6668 27 53.6668C12.2724 53.6668 0.333313 41.7278 0.333313 27.0002ZM39.4383 18.3404C40.539 19.3189 40.6382 21.0044 39.6597 22.1051L25.4375 38.1051C24.9315 38.6744 24.2061 39.0002 23.4444 39.0002C22.6827 39.0002 21.9574 38.6744 21.4513 38.1051L14.3402 30.1051C13.3618 29.0044 13.4609 27.3189 14.5617 26.3404C15.6624 25.362 17.348 25.4611 18.3264 26.5619L23.4444 32.3196L35.6736 18.5619C36.652 17.4611 38.3375 17.362 39.4383 18.3404Z" fill="#0499DD"/>
+         </svg>
+         <div class="modal__title">Спасибо за вашу заявку!</div>
+         <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+     </div>
+</div>

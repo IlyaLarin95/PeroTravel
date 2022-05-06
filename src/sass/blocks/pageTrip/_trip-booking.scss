@@ -1,0 +1,36 @@
+.trip-booking {
+    padding-bottom: 0;
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bg {
+        @include width(800,120);
+        @include height(640,450);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/trip-booking.webp') no-repeat 50%/cover;
+        border-radius: 0px 10px 0px 0px;
+    }
+    &__form {
+        @include margin-top(90,50);
+        width: 360px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__form-item {
+        width: 100%;
+        cursor: pointer;
+    }
+    &__btns {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn {
+        padding: 16px 64px;
+        font-size: 14px;
+    }
+}

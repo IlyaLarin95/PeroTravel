@@ -1,0 +1,229 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+section {
+    @include padding-top(75,50);
+    @include padding-bottom(75,50);
+}
+
+.title {
+    font-weight: 700;
+    @include font-size(24,22);
+    line-height: 1.2;
+    color: $blue;
+}
+
+
+// Link See-all
+.see-all {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    text-decoration: underline;
+    color: #282828;
+    transition: .15s ease color;
+    &:hover {
+        transition: .15s ease color;
+        color: $yellow;
+    }
+}
+
+// Buttons
+.btn {
+    display: inline-block;
+    padding: 12px 43px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    border: none;
+    color: #FFFFFF;
+    background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+    border-radius: 40px;
+    position: relative;
+    width: fit-content;
+    transition: .3s ease color;
+    cursor: pointer;
+    &:hover {
+        color: $yellow;
+        transition: .3s ease color;
+    }
+    &_arrow {
+        padding: 16px 70px 17px 50px;
+        font-size: 14px;
+        line-height: 17px;
+        border-radius: 60px;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 50px;
+            background: url('../icons/arrow-btn.svg') no-repeat center;
+            width: 14px;
+            height: 8px;
+            transition: .3s ease transform;
+        }
+        &:hover {
+            &:after {
+                transition: .3s ease transform;
+                transform: translate(10px, -50%);
+            }
+        }
+    }
+}
+
+
+// Price Item
+.item-price {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -17px;
+        left: -17px;
+        width: 57px;
+        height: 57px;
+        border-radius: 100%;
+        background-color: $yellow;
+        z-index: -1;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        border-bottom: 44px solid #fff;
+        border-left: 44px solid #fff;
+        border-bottom-right-radius: 100%;
+        filter: blur(15px);
+        z-index: 10;
+
+    }
+    &__box {
+        padding: 20px;
+        min-width: 160px;
+        height: 100px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    &__value {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        color: $blue;
+        position: relative;
+        padding-left: 40px;
+        &:before {
+            content: '';
+            background: url('../icons/price-trip.svg') no-repeat center;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        &-time {
+            position: relative;
+            &:before {
+                content: '';
+                background: url('../icons/time-trip.svg') no-repeat center;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+            }
+        }
+    }
+    &__type {
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $black;
+    }
+}
+
+// Favorite Icon
+.icon-fav {
+    cursor: pointer;
+    &.active {
+        fill: none;
+        path {
+            stroke: $blue;
+            fill: $blue;
+        }
+    }
+}
+
+//Inputs
+.item-input {
+    padding: 17px 30px;
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    background: url("../icons/map.svg") no-repeat center right 25px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    &_date {
+        background: none;
+        &::-webkit-calendar-picker-indicator {
+            background: url("../icons/calendar.svg") no-repeat center;
+            width: 20px;
+            height: 20px;
+            right: 25px;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+    &_select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url("../icons/people.svg") no-repeat center right 25px;
+        cursor: pointer;
+        outline: none;
+        option {
+            background-color: transparent;
+            border-radius: 10px;
+            outline: none;
+        }
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    &:focus {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+        outline: none;
+        transition: .3s all ease;
+    }
+    &::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #000000;
+    }
+}
